@@ -1,12 +1,20 @@
 BoathouseBlog::Application.routes.draw do
-  get "welcome/index"
+  get "users/show"
   resources :posts
-  # The priority is based upon order of creation: first created -> highest priority.
+
+  devise_for :users
+  # devise_for :installs
+    root "posts#index"
+  get "about" => "pages#about" # creates about_path
+  get "services" => "services#about" # creates services_path
+  get "media" => "media#about" # creates media_path
+  get "contact" => "contact#about" # creates contact_path
+   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root to: 'welcome#index'
-  get "about" => "pages#about" # creates about_path
+  # root "welcome#index"
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
