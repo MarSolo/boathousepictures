@@ -6,9 +6,9 @@ BoathouseBlog::Application.routes.draw do
   # devise_for :installs
     root "posts#index"
   get "about" => "pages#about" # creates about_path
-  get "services" => "services#about" # creates services_path
-  get "media" => "media#about" # creates media_path
-  get "contact" => "contact#about" # creates contact_path
+  get "services" => "pages#services" # creates services_path
+  get "media" => "pages#media" # creates media_path
+  get "contact" => "pages#contact" # creates contact_path
    # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
