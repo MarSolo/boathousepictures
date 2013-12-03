@@ -4,7 +4,7 @@ BoathouseBlog::Application.routes.draw do
   resources :posts
 
   # devise_for :installs
-    root "posts#index"
+  root "posts#index"
   get "about" => "pages#about" # creates about_path
   get "services" => "pages#services" # creates services_path
 
