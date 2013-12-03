@@ -12,16 +12,11 @@
   </tr>
  
 <% @posts.each do |post| %>
-  <div class="box"> 
-      <%= post.title %>
-      <%= post.text %>
-      <%= post.user.email if post.user %>
-      <%= link_to 'Show', post_path(post) %>
-      <% if post.user == current_user %>
-        <%= link_to 'Edit', edit_post_path(pin) %>
-        <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
-      <% end %>
-      </div>
-    </div>
+  <tr>
+    <td><%= post.title %></td>
+    <td><%= post.text %></td>
+    <td><%= link_to 'Show', post %></td>
+    <td><%= link_to 'Edit', edit_post_path(post) %></td>
+  </tr>
 <% end %>
 </table>

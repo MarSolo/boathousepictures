@@ -1,8 +1,8 @@
 BoathouseBlog::Application.routes.draw do
-  get "users/show"
+  devise_for :admins
+  get "admins/show"
   resources :posts
 
-  devise_for :users
   # devise_for :installs
     root "posts#index"
   get "about" => "pages#about" # creates about_path
