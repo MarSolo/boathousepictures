@@ -7,8 +7,14 @@ BoathouseBlog::Application.routes.draw do
     root "posts#index"
   get "about" => "pages#about" # creates about_path
   get "services" => "pages#services" # creates services_path
+
+    get "event" => "pages#event"
+    get "corporate" => "pages#corporate"
+    get "special" => "pages#special"
+    
   get "media" => "pages#media" # creates media_path
   get "contact" => "pages#contact" # creates contact_path
+
    # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

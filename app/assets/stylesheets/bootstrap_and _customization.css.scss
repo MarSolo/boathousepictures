@@ -12,6 +12,18 @@ $jumbotron-bg:               white;
 
 @import 'bootstrap';
 
+h2 {
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+}
+
+h3 {
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+}
+
 .center {
      text-align: center;
 }

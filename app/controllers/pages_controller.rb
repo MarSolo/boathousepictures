@@ -6,6 +6,14 @@ class PagesController < ApplicationController
   end
 
   def services
+      def event
+      end
+
+      def corporate
+      end
+
+      def special
+      end
   end
 
   def media
