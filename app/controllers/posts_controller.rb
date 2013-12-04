@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 http_basic_authenticate_with name: "Mario", password: "rusty1984", except: [:index, :show]
  
   def index
-    @posts = Post.all
+    @posts = Post.all.order("created_at DESC")
   end
 
   def new
@@ -35,7 +35,7 @@ http_basic_authenticate_with name: "Mario", password: "rusty1984", except: [:ind
   end
 
   def index
-    @posts = Post.all
+    @posts = Post.all.order("created_at DESC")
   end
 
   def show
