@@ -46,13 +46,18 @@ http_basic_authenticate_with name: "Mario", password: "rusty1984", except: [:ind
     @post = Post.find(params[:id])
     @post.destroy
    
-    redirect_to posts_path
+    redirect_to posts_url
   end
 
     private
   	  def post_params
   	    params.require(:post).permit(:title, :text)
   	  end
+
+      def correct_user
+        @post = current_admin.posts.find_by(id: params[:id])
+        redirect_to posts_path, notice: "Not authorized to edit this post" if @post.nil?
+      end
 
 
   end

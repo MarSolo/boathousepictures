@@ -1,6 +1,8 @@
 <h1>News Updates:</h1>
 
-<%= link_to 'New post', new_post_path %>
+<% if admin_signed_in? %>
+    <%= link_to 'New post', new_post_path %>
+<% end %>
 
 <br>
 <br>
@@ -10,23 +12,27 @@
     <div class="box panel panel-default">
     <div class="panel-body">
       <div class="actions">
-        <h3><%= post.title %></h3><br/>
-        <h5>Post created by <%= post.admin.name if post.admin %></strong></h5>
+        <%= link_to post do %><h3><%= post.title %></h3><% end %>
+        <h5>Post created by <strong><%= post.admin.name if post.admin %></strong></h5>
+        <br>
         <%= post.text %>
         <br>
         <br>
-        <%= link_to post do %>
-        <span class="glyphicon glyphicon-book"></span>
-        Read
+
+        <% if post.admin == current_admin %>
+
+            <%= link_to edit_post_path(post) do %>
+                <span class="glyphicon glyphicon-edit"></span>
+                Edit
+            <% end %>
+
+            <%= link_to post, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <span class="glyphicon glyphicon-trash"></span>
+                Delete
+            <% end %>
+            
         <% end %>
-        <%= link_to edit_post_path(post) do %>
-        <span class="glyphicon glyphicon-edit"></span>
-        Edit
-        <% end %>
-        <%= link_to 'Delete', method: :delete, data: { confirm: 'Are you sure?' } do %>
-        <span class="glyphicon glyphicon-trash"></span>
-        Delete
-        <% end %>
+
       </div>
     </div>
     </div>
