@@ -5,4 +5,6 @@ class Post < ActiveRecord::Base
                     length: { minimum: 5 }
 
     validates :text, presence: true
+
+    has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }
 end

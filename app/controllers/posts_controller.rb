@@ -1,13 +1,17 @@
 class PostsController < ApplicationController
 
-http_basic_authenticate_with name: "Mario", password: "rusty1984", except: [:index, :show]
+before_action :authenticate_admin!, except: [:index, :show]
+
+=begin
+  http_basic_authenticate_with name: "Mario", password: "rusty1984", except: [:index, :show]
+=end
  
   def index
     @posts = Post.all.order("created_at DESC")
   end
 
   def new
-  	@post = Post.new
+  	@post = current_admin.posts.build
   end
    
   def create
@@ -51,7 +55,7 @@ http_basic_authenticate_with name: "Mario", password: "rusty1984", except: [:ind
 
     private
   	  def post_params
-  	    params.require(:post).permit(:title, :text)
+  	    params.require(:post).permit(:image, :title, :text)
   	  end
 
       def correct_user

@@ -14,6 +14,7 @@
       <div class="actions">
         <%= link_to post do %><h3><%= post.title %></h3><% end %>
         <h5>Post created by <strong><%= post.admin.name if post.admin %></strong></h5>
+        <%= link_to image_tag(post.image.url(:medium)), post %>
         <br>
         <%= post.text %>
         <br>
@@ -30,7 +31,7 @@
                 <span class="glyphicon glyphicon-trash"></span>
                 Delete
             <% end %>
-            
+
         <% end %>
 
       </div>
