@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
-
-before_action :authenticate_admin!, except: [:index, :show]
+  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :correct_admin, only: [:edit, :update, :destroy]
+  before_action :authenticate_admin!, except: [:index, :show]
 
 =begin
   http_basic_authenticate_with name: "Mario", password: "rusty1984", except: [:index, :show]
@@ -15,7 +16,7 @@ before_action :authenticate_admin!, except: [:index, :show]
   end
    
   def create
-  	@post = Post.new(params[:post].permit(:title, :text))
+  	@post = current_admin.posts.build(post_params)
    
       if @post.save
       	redirect_to @post
@@ -36,32 +37,26 @@ before_action :authenticate_admin!, except: [:index, :show]
     else
       render 'edit'
     end
-  end
-
-  def index
-    @posts = Post.all.order("created_at DESC")
-  end
-
-  def show
-    @post = Post.find(params[:id])
-  end
+  end 
 
   def destroy
-    @post = Post.find(params[:id])
     @post.destroy
    
     redirect_to posts_url
   end
 
     private
+      # Use callbacks to share common setup or constraints between actions.
+      def set_post
+        @post = Post.find(params[:id])
+      end
+
   	  def post_params
   	    params.require(:post).permit(:image, :title, :text)
   	  end
 
-      def correct_user
+      def correct_admin
         @post = current_admin.posts.find_by(id: params[:id])
         redirect_to posts_path, notice: "Not authorized to edit this post" if @post.nil?
       end
-
-
   end

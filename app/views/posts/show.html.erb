@@ -1,3 +1,5 @@
+<%= link_to 'Back', posts_path %>
+
 <div class="row">
   <div class="col-md-offset-2 col-md-8">
     <div class="panel panel-default">
@@ -6,16 +8,17 @@
 			<h3><%= @post.title %></h3><br/>
 	        <h5>Post created by <strong><%= @post.admin.name if @post.admin %></strong>
 	        </h5>
-	        <%= image_tag @post.image.url %>
+	        <%= image_tag @post.image.url (:medium) %>
 	        <br>
 	        <%= @post.text %>
     	</p>
-		
-			<%= link_to 'Back', posts_path %>
 
-			<% if admin_signed_in? %>
-				|  <%= link_to 'Edit', edit_post_path(@post) %>
-			<% end %>
+			<% if @post.admin == current_admin %>
+				<%= link_to edit_post_path(@pin) do %>
+				<span class="glyphicon glyphicon-edit"></span>
+	        	Edit
+	      		<% end %>
+        <% end %>
 
 	   </div>
 	</div>

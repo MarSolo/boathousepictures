@@ -7,4 +7,6 @@ class Post < ActiveRecord::Base
     validates :text, presence: true
 
     has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }
+
+    validates :image, presence: true
 end
