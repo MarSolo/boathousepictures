@@ -1,4 +1,5 @@
 class Post < ActiveRecord::Base
+	
 	belongs_to :admin
 
 	validates :title, presence: true,
@@ -9,4 +10,5 @@ class Post < ActiveRecord::Base
     has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }
 
     validates :image, presence: true
+
 end
