@@ -7,4 +7,7 @@ class Admin < ActiveRecord::Base
   has_many :posts
 
   validates :name, presence: true
+
+  validates_format_of :email, :with => /bhpictures\.com/, 
+  :message => "- That's not a BoatHouse Pictures email address."
 end
