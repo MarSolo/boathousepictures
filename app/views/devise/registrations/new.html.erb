@@ -5,8 +5,8 @@
     </div>
   </div>
   <div class="panel-body">
-    <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
-      <%= devise_error_messages! %>
+    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
 
   <div class="form-group">
       <%= f.label :name %>
@@ -16,7 +16,7 @@
   <div class="form group">
     <%= f.label :email %>
     <%= f.email_field :email, class: "form-control" %>
-    </div>
+  </div>
 
   <div class="form-group">
     <%= f.label :password %>
