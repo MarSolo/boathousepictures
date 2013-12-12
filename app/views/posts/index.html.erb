@@ -16,7 +16,8 @@
         <h5>Post created by <strong><%= post.admin.name if post.admin %></strong></h5>
         <%= link_to image_tag(post.image.url(:medium)), post %>
         <br>
-        <%= post.text %>
+        <br>
+        <%= link_to post do %>Read More...<% end %>
         <br>
         <br>
 
