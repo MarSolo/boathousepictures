@@ -11,11 +11,12 @@
 	        <%= image_tag @post.image.url (:medium) %>
 	        <br>
 	        <br>
-	        <%= @post.text %>
+	        <%= simple_format @post.text %>
+	        <br>
     	</p>
 
 			<% if @post.admin == current_admin %>
-				<%= link_to edit_post_path(@pin) do %>
+				<%= link_to edit_post_path(@post) do %>
 				<span class="glyphicon glyphicon-edit"></span>
 	        	Edit
 	      		<% end %>

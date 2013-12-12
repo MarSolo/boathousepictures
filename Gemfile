@@ -18,6 +18,7 @@ gem 'masonry-rails', '~> 0.2.0'
 gem 'will_paginate', '~> 3.0'
 gem 'will_paginate-bootstrap'
 gem 'rename'
+gem 'tinymce-rails'
 
 
 group :development, :test do
