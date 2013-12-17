@@ -23,5 +23,19 @@ module BoathouseBlog
     #Required for Heroku
     config.assets.initialize_on_precompile = false
 
+    config.action_mailer.smtp_settings = {
+      :address              => "smtp.gmail.com",
+      :port                 => 587,
+      :domain               => "google.com",
+      :user_name            => "mariosolo@gmail.com",
+      :password             => "jma32154a",
+      :authentication       => :plain,
+      :enable_starttls_auto => true
+    }
+
+    config.action_mailer.default_url_options = {
+      :host => "yourdomain.dev"
+    }
+
   end
 end

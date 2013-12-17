@@ -6,8 +6,7 @@
   <% if admin_signed_in? %>
     <li>
       <%= link_to new_post_path do %>
-        <span class="glyphicon glyphicon-plus"></span> Post
-          <% end %>
+        <span class="glyphicon glyphicon-plus"></span>Post<% end %>
     </li>
         <li><%= link_to "Account", edit_admin_registration_path %></li>
         <li><%= link_to "Log Out", destroy_admin_session_path, method: :delete %></li>

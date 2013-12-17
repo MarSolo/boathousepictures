@@ -13,7 +13,8 @@ BoathouseBlog::Application.routes.draw do
     get "special" => "pages#special"
     
   get "media" => "pages#media" # creates media_path
-  get "contact" => "pages#contact" # creates contact_path
+
+  get "contact" => "pages#contact"
 
    # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
