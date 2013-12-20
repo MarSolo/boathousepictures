@@ -1,6 +1,6 @@
   @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 
-$body-bg:                    #ecf0f1;
+$body-bg:                    #ecf0f1; 
 $font-family-sans-serif:     'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $navbar-height:              45px;
 $navbar-default-bg:          white;
@@ -11,6 +11,14 @@ $jumbotron-bg:               white;
 
 
 @import 'bootstrap';
+
+body {
+	background: url('/images/photo.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
 
 h1 {
 	font-size: 25px;

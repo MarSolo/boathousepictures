@@ -26,9 +26,9 @@ module BoathouseBlog
     config.action_mailer.smtp_settings = {
       :address              => "smtp.gmail.com",
       :port                 => 587,
-      :domain               => "google.com",
-      :user_name            => "mariosolo@gmail.com",
-      :password             => "jma32154a",
+      :domain               => "bhpictures.com",
+      :user_name            => "info@bhpictures.com",
+      :password             => "admin1",
       :authentication       => :plain,
       :enable_starttls_auto => true
     }
