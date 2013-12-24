@@ -1,4 +1,6 @@
 BoathouseBlog::Application.routes.draw do
+  resources :users
+
   devise_for :admins
   get "admins/show"
   resources :posts
@@ -13,9 +15,7 @@ BoathouseBlog::Application.routes.draw do
     get "special" => "pages#special"
     
   get "media" => "pages#media" # creates media_path
-
-  match 'contact' => 'contact#new', :as => 'contact', :via => :get
-  match 'contact' => 'contact#create', :as => 'contact', :via => :post
+  get "contact" => "pages#contact"
 
    # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
