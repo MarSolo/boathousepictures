@@ -19,4 +19,7 @@ class PagesController < ApplicationController
   def media
   end
 
+  def contact
+  end
+
 end

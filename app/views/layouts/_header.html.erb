@@ -9,17 +9,15 @@
       <span class="icon-bar"></span>
     </button>
     <a class="navbar-brand" href="/">
-      <!-- <%= image_tag("boathouse_logo_new.png", :alt => "boathouse") %> -->
-      BoatHouse Pictures
     </a>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
-  <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "About", about_path %></li>
-        <li><%= link_to "Services", services_path %></li>
-        <li><%= link_to "Media", media_path %></li>
-        <li><%= link_to "Contact", contact_path %></li>
+  <ul class="nav navbar-nav navbar">
+        <li><%= link_to image_tag("header.png", :alt => "boathouse"), root_path %></li>
+        <li><%= link_to "ABOUT", about_path %></li>
+        <li><%= link_to "SERVICES", services_path %></li>
+        <li><%= link_to "MEDIA", media_path %></li>
+        <li><%= link_to "CONTACT", contact_path %></li>
   </ul>
 </nav>

@@ -1,11 +1,8 @@
 <h1>The Latest:</h1>
 
 <% if admin_signed_in? %>
-    <%= link_to 'New Post', new_post_path %>
+    <h6><%= link_to 'New Post', new_post_path %></h6>
 <% end %>
-
-<br>
-<br>
 
 <div id="posts" class="transitions-enabled">
   <% @posts.each do |post| %>
