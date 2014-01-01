@@ -7,7 +7,8 @@ $navbar-default-bg:          white;
 $navbar-default-brand-color: #000099;
 $navbar-default-link-color:  #000099;
 $brand-primary:              #000099;
-$jumbotron-bg:               white;
+$nav-alt-height:             10px;
+$nav-alt-default-bg:         white;
 
 
 @import 'bootstrap';
@@ -65,4 +66,17 @@ ul li {
 
 .navbar-brand {
      font-weight: bold;
+}
+
+.nav-alt {
+	display: inline-block;
+	font-size: 14px;
+	margin-top: 58px;
+	padding: 0;
+	float: none;
+	position: relative;
+}
+
+.nav-alt li{
+	margin-left: 25px;
 }
