@@ -2,7 +2,7 @@
 
 $body-bg:                    #ecf0f1; 
 $font-family-sans-serif:     ProximaNova-Light, Verdana, sans-serif;
-$navbar-height:              45px;
+$navbar-height:              25px;
 $navbar-default-bg:          white;
 $navbar-default-brand-color: #000099;
 $navbar-default-link-color:  #000099;
@@ -26,7 +26,7 @@ h1 {
 }
 
 h2 {
-	font-size: 25px;
+	font-size: 20px;
 	text-align: center;
 }
 
@@ -43,7 +43,7 @@ h4 {
 }
 
 h5 {
-	font-size: 9px;
+	font-size: 10px;
 }
 
 h6 {
@@ -51,7 +51,7 @@ h6 {
 }
 
 ul li {
-	display: inline;
+	display: inline-block;
 	font-size: 14px;
 	margin: 0;
 	padding: 0;
