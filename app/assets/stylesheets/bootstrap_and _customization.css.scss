@@ -9,7 +9,7 @@ $navbar-default-link-color:  #000099;
 $brand-primary:              #000099;
 $nav-alt-height:             10px;
 $nav-alt-default-bg:         white;
-
+$jumbotron-bg:               white;
 
 @import 'bootstrap';
 
@@ -79,4 +79,20 @@ ul li {
 
 .nav-alt li{
 	margin-left: 25px;
+	margin-top: 30px;
+}
+
+.fleft { 
+	float: inherit; 
+	margin: 0px 20px 0px 0; 
+}
+
+.navigation4 {
+	margin: 0px auto;
+	position: relative;
+}
+
+.navigation4 li {
+	display: inline-block;
+	font-size: 12px;
 }
