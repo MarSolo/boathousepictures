@@ -7,3 +7,9 @@ $ ->
     $('#posts').masonry
       itemSelector: '.box'
       isFitWidth: true
+
+$ ->
+  $('#posts_alt').imagesLoaded ->
+    $('#posts_alt').masonry
+      itemSelector: '.box'
+      isFitWidth: true

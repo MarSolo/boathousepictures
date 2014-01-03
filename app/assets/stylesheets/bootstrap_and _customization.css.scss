@@ -21,6 +21,14 @@ body {
 	background-size: cover;
 }
 
+.jumbotron {
+	
+}
+
+.jumbotron h1 {
+	font-size: 25px;
+}
+
 h1 {
 	font-size: 25px;
 	padding-left: 40px;
@@ -39,7 +47,7 @@ h3 {
 
 h4 {
 	font-size: 12px;
-	text-align: left;
+	text-align: center;
 	padding-left: 15px;
 }
 
@@ -74,25 +82,25 @@ ul li {
 	margin-top: 58px;
 	padding: 0;
 	float: none;
-	position: relative;
+	position: absolute;
 }
 
 .nav-alt li{
 	margin-left: 25px;
-	margin-top: 30px;
 }
 
-.fleft { 
-	float: inherit; 
-	margin: 0px 20px 0px 0; 
-}
-
-.navigation4 {
-	margin: 0px auto;
+.nav-vid {
+	margin: 20px;
 	position: relative;
 }
 
-.navigation4 li {
+.nav-vid li {
 	display: inline-block;
 	font-size: 12px;
+}
+
+.nav-vid li a {
+	margin: 0px 50px 20px 0px;
+	text-decoration: none;
+	display: inline-block;
 }
