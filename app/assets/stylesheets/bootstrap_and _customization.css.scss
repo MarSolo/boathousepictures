@@ -5,7 +5,7 @@ $font-family-sans-serif:     ProximaNova-Light, Verdana, sans-serif;
 $navbar-height:              25px;
 $navbar-default-bg:          white;
 $navbar-default-brand-color: #000099;
-$navbar-default-link-color:  #000099;
+$navbar-default-link-color:  white;
 $brand-primary:              #000099;
 $nav-alt-height:             10px;
 $nav-alt-default-bg:         white;
@@ -36,7 +36,7 @@ h2 {
 }
 
 h3 {
-	font-size: 18px;
+	font-size: 20px;
 	text-align: middle;
 }
 
@@ -70,6 +70,10 @@ ul li {
 
 .navbar-brand {
      font-weight: bold;
+}
+
+.navbar-inner {
+    background: transparent;
 }
 
 .nav-alt {
