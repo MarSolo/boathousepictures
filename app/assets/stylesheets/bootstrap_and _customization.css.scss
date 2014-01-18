@@ -5,7 +5,7 @@ $font-family-sans-serif:     ProximaNova-Light, Verdana, sans-serif;
 $navbar-height:              25px;
 $navbar-default-bg:          white;
 $navbar-default-brand-color: #000099;
-$navbar-default-link-color:  white;
+$navbar-default-link-color:  blue;
 $brand-primary:              #000099;
 $nav-alt-height:             10px;
 $nav-alt-default-bg:         white;
@@ -14,11 +14,11 @@ $jumbotron-bg:               white;
 @import 'bootstrap';
 
 body {
-	background: url('/images/photo.jpg') no-repeat center center fixed;
+	/* background: url('/images/photo.jpg') no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
-	background-size: cover;
+	background-size: cover; */
 }
 
 .jumbotron h1 {
@@ -26,18 +26,16 @@ body {
 }
 
 h1 {
-	font-size: 25px;
-	padding-left: 40px;
+	font-size: 20px;
+	padding: 0px;
 }
 
 h2 {
 	font-size: 20px;
-	text-align: center;
 }
 
 h3 {
 	font-size: 20px;
-	text-align: middle;
 }
 
 
@@ -52,7 +50,6 @@ h5 {
 }
 
 h6 {
-	padding-left: 40px;
 }
 
 ul li {

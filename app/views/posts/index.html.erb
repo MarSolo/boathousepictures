@@ -1,12 +1,11 @@
 <br>
-<br>
 
 <div class="video_frame">
-  <iframe src="//player.vimeo.com/video/66759737" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/66759737">Roadwork Ahead: Official Teaser</a> from <a href="http://vimeo.com/csarkisgraham">Christian Sarkis Graham</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+  <iframe src="//player.vimeo.com/video/66759737" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/66759737">Roadwork Ahead: Official Teaser</a>.</p>
 </div>
                         
 <div class="row">
-<div class="col-md-6">
+<div class="col-md-8">
   <h1>News</h1>
 <% if admin_signed_in? %>
     <h6><%= link_to 'New Post', new_post_path %></h6>
@@ -18,13 +17,11 @@
     <div class="panel-body">
       <div class="actions">
         <%= link_to post do %><h3><%= post.title %></h3><% end %>
-        <h5>Posted by <strong><%= post.admin.name if post.admin %></strong></h5>
-        <%= link_to image_tag(post.image.url(:medium)), post %>
-        <br>
-        <br>
-        <%= link_to post do %>Read More...<% end %>
-        <br>
-        <br>
+        <h5>Posted by <strong><%= post.admin.name if post.admin %></strong> on 
+        <%= post.created_at.strftime("%b %d, %Y") %></h5>
+        <!-- <p><%= link_to image_tag(post.image.url(:medium)), post %><p> -->
+            <%= truncate post.text, length: 35 %>
+        <%= link_to post do %><h6>Read More</h6><% end %>
 
         <% if post.admin == current_admin %>
 
@@ -45,8 +42,8 @@
 </div>
 </div>
 
-<div class="col-md-6">
-  <h1 align="right">Social Media</h1>
+<div class="col-md-3">
+  <h1 align="right">BHP's Twitter</h1>
   <a class="twitter-timeline" href="https://twitter.com/BH_Pictures" data-widget-id="421485262435127296">Tweets by @BH_Pictures</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </div>

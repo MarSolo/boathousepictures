@@ -2,14 +2,13 @@
   <div class="col-md-offset-2 col-md-8">
     <div class="panel panel-default">
       <div class="panel-heading center">
-		<h2><%= @post.title %></h2>
-	        <h5>Post created by <strong><%= @post.admin.name if @post.admin %></strong>
-	        </h5>
-	        	<%= image_tag @post.image.url (:medium) %>
+	    <%= image_tag @post.image.url (:medium) %>
 	        </div>
-	        <br>
-	        <br>
 	        <div class="panel-body">
+	        	<h2><%= @post.title %></h2>
+		        <h5>Post created by <strong><%= @post.admin.name if @post.admin %></strong>
+		        </h5>
+		        <br>
 	        	<%= simple_format @post.text %>
 	        <br>
 
