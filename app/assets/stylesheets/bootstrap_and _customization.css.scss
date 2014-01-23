@@ -53,11 +53,11 @@ h6 {
 
 ul li {
 	display: inline-block;
-	font-size: 14px;
+	font-size: 13px;
 	margin: 0;
 	padding: 0;
 	float: none;
-	position: relative;
+	position: absolute;
 }
 
 .center {
@@ -65,9 +65,6 @@ ul li {
 }
 
 .navbar {
-	position: absolute;
-	margin-left: 250px;
-	margin-top: -30px;
 }
 
 .navbar-inner {           
