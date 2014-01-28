@@ -21,9 +21,6 @@ body {
 	// background-size: cover; 
 }
 
-.jumbotron h1 {
-}
-
 h1 {
 	font-size: 20px;
 	padding: 0px;
@@ -48,34 +45,27 @@ h5 {
 	font-size: 10px;
 }
 
-h6 {
-}
-
-ul li {
-	display: inline-block;
-	font-size: 13px;
-	margin: 0;
-	padding: 0;
-	float: none;
-	position: absolute;
-}
-
 .center {
      text-align: center;
 }
 
-.navbar {
+.navbar {	
+	padding: 70px 0px 0 220px;
+	position: absolute;
+}
+
+.navbar ul li {
+	display: inline-block;
+	font-size: 13px;
 }
 
 .navbar-inner {           
     background: rgba(0,0,0,0.0);
 }
 
-.navbar li {
-}
-
-.navbar-image {                
-    position: relative;
+.navbar-socialmedia {
+	padding: 70px 0px 0 320px;
+	position: absolute;
 }
 
 .nav-vid {

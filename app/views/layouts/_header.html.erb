@@ -5,6 +5,9 @@
   <div class="container">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
+          <a><%= link_to image_tag("boathouse_logo_v2.png", :alt => "boathouse"), 
+          root_path %></a>
+    </ul>
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
       <span class="sr-only">Toggle navigation</span>
       <span class="icon-bar"></span>
@@ -12,11 +15,6 @@
       <span class="icon-bar"></span>
     </button>
     </div>
-
-    <ul class="nav navbar-image">
-          <li><%= link_to image_tag("boathouse_logo.png", :alt => "boathouse"), 
-          root_path %></li>
-      </ul>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -26,15 +24,24 @@
           <li><%= link_to "MEDIA", media_path %></li>
           <li><%= link_to "CONTACT", contact_path %></li>
       </ul>
-      <!--<ul class="nav navbar-nav navbar">
-            <li><a href="https://www.facebook.com/bhpictures" target="_blank">
-              <img src="images/facebook.png"></a></li>
-            <li><a href="https://twitter.com/BH_Pictures" target="_blank">
-              <img src="images/twitter-2.png"></a></li>
-            z<li><a href="https://www.pinterest.com/bhpictures" target="_blank">
+      <div id=" nav navbar-socialmedia">
+            <a href="https://www.facebook.com/bhpictures" target="_blank">
+              <img src="images/facebook.png"></a>
+            <a href="https://twitter.com/BH_Pictures" target="_blank">
+              <img src="images/twitter-2.png"></a>
+            <!-- <li><a href="https://www.pinterest.com/bhpictures" target="_blank">
               <img src="images/pinterest.png"></a></li>
             <li><a href="https://www.youtube.com/bhpictures" target="_blank">
               <img src="images/youtube.png"></a></li> -->
-      </ul>
+      </div>
   </div>
 </nav>
+
+
+<!-- <div id="block-bean-social-links" class="block block-bean narrow ombubeans-sociallinks">
+  <div class="content">
+    <div class="entity entity-bean bean-ombubeans-sociallinks clearfix" about="/block/social-links" typeof="">
+
+    <div class="content">
+    <a href="https://www.facebook.com/Paramount" class="facebook" target="_blank">Facebook</a><a href="https://twitter.com/ParamountPics" class="twitter" target="_blank">Twitter</a><a href="http://pinterest.com/paramountpics/" class="pinterest" target="_blank">Pinterest</a><a href="https://www.youtube.com/paramount" class="youtube" target="_blank">YouTube</a><a href="/feed" class="rss">RSS</a>  
+    </div> -->
