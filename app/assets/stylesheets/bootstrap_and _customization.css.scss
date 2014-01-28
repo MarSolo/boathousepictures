@@ -50,8 +50,7 @@ h5 {
 }
 
 .navbar {	
-	padding: 70px 0px 0 220px;
-	position: absolute;
+	margin: 70px 120px 0 20px;
 }
 
 .navbar ul li {
@@ -59,13 +58,12 @@ h5 {
 	font-size: 13px;
 }
 
-.navbar-inner {           
-    background: rgba(0,0,0,0.0);
+.navbar-header {
+	margin: 0px 20px 0 50px;
 }
 
-.navbar-socialmedia {
-	padding: 70px 0px 0 320px;
-	position: absolute;
+.navbar-inner {           
+    background: rgba(0,0,0,0.0);
 }
 
 .nav-vid {
