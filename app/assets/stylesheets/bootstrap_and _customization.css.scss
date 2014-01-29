@@ -46,38 +46,15 @@ h5 {
 }
 
 .center {
-     text-align: center;
-}
-
-.navbar {	
-	margin: 70px 120px 0 20px;
-}
-
-.navbar ul li {
-	display: inline-block;
-	font-size: 13px;
+    text-align: center;
 }
 
 .navbar-header {
-	margin: 0px 20px 0 50px;
-}
-
-.navbar-inner {           
-    background: rgba(0,0,0,0.0);
-}
-
-.nav-vid {
-	margin: 20px;
-	position: relative;
-}
-
-.nav-vid li {
-	display: inline-block;
-	font-size: 12px;
-}
-
-.nav-vid li a {
-	margin: 0px 0px 20px 0px;
+	margin: 0 0px 0 80px;
+	padding: 0;
 	text-decoration: none;
-	display: inline-block;
+}
+
+.navbar li {
+	margin: 70px 0 0 30px;
 }
