@@ -17,8 +17,8 @@ BoathouseBlog::Application.routes.draw do
   get "media" => "pages#media" # creates media_path
   # get "contact" => "pages#contact"
 
-  match 'contact' => 'contact#new', :as => 'contact', :via => :get
-  match 'contact' => 'contact#create', :as => 'contact', :via => :post
+ get 'contact' => 'contact#new', :as => 'contact', :via => :get
+ get 'contact' => 'contact#create', :as => 'contact', :via => :post
 
    # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
