@@ -23,5 +23,21 @@ module BoathouseBlog
     #Required for Heroku
     config.assets.initialize_on_precompile = false
 
+    config.action_mailer.smtp_settings = {
+      :address              => "email.powweb.com",
+      :port                 => 587,
+      :domain               => "bhpictures.com",
+      :user_name            => "mail@bhpictures.com",
+      :password             => "admin1",
+      :authentication       => :plain,
+      :enable_starttls_auto => true
+    }
+
+    config.action_mailer.default_url_options = {
+      :host => "bhpictures.com"
+    }
+
   end
 end
+
+

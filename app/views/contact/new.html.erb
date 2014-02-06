@@ -1,0 +1,47 @@
+<%= form_for @message, :url => contact_path do |form| %>
+
+<h1>Contact</h1>
+
+    <p>If you have any questions, concerns, or feedback, please email us using the contact space provided.</p>
+
+    <p>To make an appointment, book a service(s), or request more information regarding the services we provide, please contact us at:</p>
+
+    <h2 class="text-primary">Phone Number:</h2> 
+    <p>(215) 821-8663</p>
+
+    <h2 class="text-primary">Email:</h2>
+    <p>mail@bhpictures.com</p>
+
+    <br>
+
+<div id="posts" class="transitions-enabled">
+<div class="box panel panel-default">
+<div class="panel-body">
+
+    <div class="form-group">
+      <%= form.label :name %> (Required)<br>
+      <%= form.text_field :name %>
+    </div>
+    
+    <div class="form-group">
+      <%= form.label :email %> (Required)<br>
+      <%= form.text_field :email %>
+    </div>
+    <div class="form-group">
+      <%= form.label :subject %><br>
+      <%= form.text_field :subject %>
+    </div>
+    
+    <div class="form-group">
+      <%= form.label :body %>
+      <%= form.text_area :body, class: "form-control" %>
+    </div>
+  
+  <fieldset class="actions">
+    <%= form.submit "Send" %>
+  </fieldset>
+<% end %>
+
+</div>
+</div>
+</div>
