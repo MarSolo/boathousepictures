@@ -26,7 +26,7 @@ module BoathouseBlog
     config.action_mailer.smtp_settings = {
       :address              => "smtp.gmail.com",
       :port                 => 587,
-      :domain               => "www.bhpictures.com",
+      :domain               => "http://boathousepictures.herokuapp.com",
       :user_name            => "info@bhpictures.com",
       :password             => "admin1",
       :authentication       => :plain,
@@ -34,7 +34,7 @@ module BoathouseBlog
     }
 
     config.action_mailer.default_url_options = {
-      :host => "www.bhpictures.com"
+      :host => "http://boathousepictures.herokuapp.com"
     }
 
   end
