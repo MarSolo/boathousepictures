@@ -14,6 +14,9 @@ class PagesController < ApplicationController
 
       def special
       end
+
+      def perna
+      end
   end
 
   def media

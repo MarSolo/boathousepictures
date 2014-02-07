@@ -24,17 +24,17 @@ module BoathouseBlog
     config.assets.initialize_on_precompile = false
 
     config.action_mailer.smtp_settings = {
-      :address              => "email.powweb.com",
+      :address              => "smtp.gmail.com",
       :port                 => 587,
-      :domain               => "bhpictures.com",
-      :user_name            => "mail@bhpictures.com",
+      :domain               => "www.bhpictures.com",
+      :user_name            => "info@bhpictures.com",
       :password             => "admin1",
       :authentication       => :plain,
       :enable_starttls_auto => true
     }
 
     config.action_mailer.default_url_options = {
-      :host => "bhpictures.com"
+      :host => "www.bhpictures.com"
     }
 
   end

@@ -13,6 +13,7 @@ BoathouseBlog::Application.routes.draw do
     get "event" => "pages#event"
     get "corporate" => "pages#corporate"
     get "special" => "pages#special"
+    get "perna" => "pages#perna"
     
   get "media" => "pages#media" # creates media_path
   # get "contact" => "pages#contact"
