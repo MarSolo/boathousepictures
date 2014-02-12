@@ -26,7 +26,7 @@ module BoathouseBlog
     config.action_mailer.smtp_settings = {
       :address              => "smtp.gmail.com",
       :port                 => 587,
-      :domain               => "mail.google.com",
+      :domain               => "gmail.com",
       :user_name            => "info@bhpictures.com",
       :password             => "admin1",
       :authentication       => :plain,
@@ -34,7 +34,7 @@ module BoathouseBlog
     }
 
     config.action_mailer.default_url_options = {
-      :host => "mail.google.com"
+      :host => "gmail.com"
     }
 
   end
