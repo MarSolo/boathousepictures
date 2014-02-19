@@ -1,6 +1,6 @@
   @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 
-$body-bg:                    #ecf0f1; 
+$body-bg:                    #99ccff; 
 $font-family-sans-serif:     ProximaNova-Light, Verdana, sans-serif;
 $navbar-height:              25px;
 $navbar-default-bg:          #ecf0f1;
@@ -45,16 +45,28 @@ h5 {
 	font-size: 10px;
 }
 
+.container {
+	background-color: #ecf0f1;
+}
+
 .center {
     text-align: center;
 }
 
+.navbar {
+	margin-bottom: -1px;
+}
+
+.navbar-header {
+	padding-left: 20px;
+}
+
 .navbar li {
-	margin: 70px 0 0 70px;
+	margin: 70px 0 0 65px;
 	font-weight: bold;
-	font-family: Georgia, Times, "Times New Roman", serif;;
+	font-family: Georgia, Times, "Times New Roman", serif;
 }
 
 .dropdown-menu li {
-	margin: 0px;
+	margin: 10px;
 }

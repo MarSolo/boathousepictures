@@ -34,7 +34,7 @@ module BoathouseBlog
     }
 
     config.action_mailer.default_url_options = {
-      :host => "yourdomain.dev"
+      :host => "gmail.com"
     }
 
   end
