@@ -1,61 +1,64 @@
 <div class="container">
   <br>
-<div class="jumbotron center">
-  <iframe src="//player.vimeo.com/video/66759737" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/66759737">Roadwork Ahead: Official Teaser</a></p>
-</div>
-                        
-<div class="row">
-<div class="col-md-8">
-  <h1>News</h1>
-<% if admin_signed_in? %>
-    <h6><%= link_to 'New Post', new_post_path %></h6>
-<% end %>
+  <div class="jumbotron center">
+    <iframe src="//player.vimeo.com/video/66759737" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/66759737">Roadwork Ahead: Official Teaser</a></p>
+  </div>
+                          
+  <div class="row">
+    <div class="col-md-8">
+        <h1>News</h1>
+      <% if admin_signed_in? %>
+          <h6><%= link_to 'New Post', new_post_path %></h6>
+      <% end %>
 
-<div id="posts" class="transitions-enabled">
-  <% @posts.each do |post| %>
-    <div class="box panel panel-default">
-    <div class="panel-body">
-      <div class="actions">
-        <%= link_to post do %><h2><%= post.title %></h2><% end %>
-        <h5>Posted by <strong><%= post.admin.name if post.admin %></strong> on 
-        <%= post.created_at.strftime("%b %d, %Y") %></h5>
-        <!-- <p><%= link_to image_tag(post.image.url(:medium)), post %><p> -->
-            <%= truncate post.text, length: 50 %>
-        <%= link_to post do %><h6>Read More</h6><% end %>
+          <div id="posts" class="transitions-enabled">
+            <% @posts.each do |post| %>
+              <div class="box panel panel-default">
+                <div class="panel-body">
+                  <div class="actions">
+                    <%= link_to post do %><h2><%= post.title %></h2><% end %>
+                    <h5>Posted by <strong><%= post.admin.name if post.admin %></strong> on 
+                    <%= post.created_at.strftime("%b %d, %Y") %></h5>
+                    <!-- <p><%= link_to image_tag(post.image.url(:medium)), post %><p> -->
+                        <%= truncate post.text, length: 50 %>
+                    <%= link_to post do %><h6>Read More</h6><% end %>
 
-        <% if post.admin == current_admin %>
+                    <% if post.admin == current_admin %>
 
-            <%= link_to edit_post_path(post) do %>
-                Edit
+                        <%= link_to edit_post_path(post) do %>
+                            Edit
+                        <% end %>
+                            <br>
+                        <%= link_to post, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                            Delete
+                        <% end %>
+
+                    <% end %>
+
+                  </div>
+                </div>
+              </div>
             <% end %>
-                <br>
-            <%= link_to post, method: :delete, data: { confirm: 'Are you sure?' } do %>
-                Delete
-            <% end %>
-
-        <% end %>
-
-      </div>
+          </div>
     </div>
+
+    <div class="col-md-4">
+      <h1 align="right">Social Media</h1>
+
+        <a class="twitter-timeline" href="https://twitter.com/BH_Pictures" data-widget-id="421485262435127296">Tweets by @BH_Pictures</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+        <br>
+        <br>
+
+      <iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fbhpictures&amp;width=280&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:290px;" allowTransparency="false">
+      </iframe>
+
     </div>
-  <% end %>
-</div>
-</div>
+  </div>
 
-<div class="col-md-4">
-  <h1 align="right">Social Media</h1>
-
-  <a class="twitter-timeline" href="https://twitter.com/BH_Pictures" data-widget-id="421485262435127296">Tweets by @BH_Pictures</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-  <br>
-  <br>
-
-<iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fbhpictures&amp;width=280&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:280px; height:290px;" allowTransparency="false">
-</iframe>
-
-</div>
-
-<div class="center">
-   <%= will_paginate @collection, renderer: BootstrapPagination::Rails %>
-</div>
+  <div class="row">
+    <div class="col-md-8">
+       <%= will_paginate @collection, renderer: BootstrapPagination::Rails %>
+    </div>
+  </div>
