@@ -4,15 +4,34 @@
 
 #posts {
   	margin: 0 auto;
-}
+}	
 
 .box {
   	width: 100%;
+
+  	// drop shadow
+  	-moz-box-shadow: 1px 0px 5px rgba(0,0,0,.5); 
+	-webkit-box-shadow: 1px 0px 5px rgba(0,0,0,.5);
+	box-shadow: 1px 0px 5px rgba(0,0,0,.5); /*10px is horizontal offset, 5px is vertical offset, 15px is blur radius and rgba(0,0,0,.5) is shadow color*/
+	margin-bottom: 30px;
+
+	// gradient background
+	background-image: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+    background-image: -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* Chrome 10+,Safari 5.1+ */
+    background-image: -ms-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* IE10+ */
+    background-image: -o-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* Opera 11.10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+    background-image: linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* W3C */
 }
 
 .box1 {
-  margin: 5px;
-  width: 214px;
+    margin: 5px;
+    width: 214px;
+    -moz-box-shadow:10px 5px 15px rgba(0,0,0,.5); 
+	-webkit-box-shadow:10px 5px 15px rgba(0,0,0,.5);
+	box-shadow: 1px 3px 5px rgba(0,0,0,.5); /*10px is horizontal offset, 5px is vertical offset, 15px is blur radius and rgba(0,0,0,.5) is shadow color*/
+	margin-bottom: 30px;
 }
 
 .box1 img {

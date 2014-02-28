@@ -1,6 +1,6 @@
   @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 
-$body-bg:                    #99ccff; 
+$body-bg:                    #ecf0f1; 
 $font-family-sans-serif:     ProximaNova-Light, Verdana, sans-serif;
 $navbar-height:              25px;
 $navbar-default-bg:          #ecf0f1;
@@ -55,10 +55,15 @@ h5 {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+
+	-moz-box-shadow:10px 5px 15px rgba(0,0,0,.5); 
+	-webkit-box-shadow:10px 5px 15px rgba(0,0,0,.5);
+	box-shadow: 1px 1px 15px rgba(0,0,0,.5); /*10px is horizontal offset, 5px is vertical offset, 15px is blur radius and rgba(0,0,0,.5) is shadow color*/
+	margin-bottom: 30px;
 }
 
 .jumbotron p {
-	color: #199999;
+	color: black;
 }
 
 .jumbotron a {
@@ -78,11 +83,25 @@ h5 {
 }
 
 .navbar li {
-	margin: 75px 0 0 65px;
+	margin: 75px 0 0 50px;
 	font-weight: bold;
 	font-family: Georgia, Times, "Times New Roman", serif;
 }
 
 .dropdown-menu li {
 	margin: 10px;
+}
+
+.twitter-timeline {
+	-moz-box-shadow:10px 5px 15px rgba(0,0,0,.5); 
+	-webkit-box-shadow:10px 5px 15px rgba(0,0,0,.5);
+	box-shadow: 1px 3px 15px rgba(0,0,0,.5); /*10px is horizontal offset, 5px is vertical offset, 15px is blur radius and rgba(0,0,0,.5) is shadow color*/
+	margin-bottom: 30px;
+}
+
+iframe {
+	-moz-box-shadow:10px 5px 15px rgba(0,0,0,.5); 
+	-webkit-box-shadow:10px 5px 15px rgba(0,0,0,.5);
+	box-shadow: 1px 3px 15px rgba(0,0,0,.5); /*10px is horizontal offset, 5px is vertical offset, 15px is blur radius and rgba(0,0,0,.5) is shadow color*/
+	margin-bottom: 30px;
 }
