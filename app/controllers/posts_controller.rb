@@ -11,6 +11,11 @@ class PostsController < ApplicationController
     @posts = Post.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
   end
 
+  def show
+    @posts = Post.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
+  end
+
+
   def new
   	@post = current_admin.posts.build
   end

@@ -49,6 +49,22 @@ h5 {
 	background-color: #ecf0f1;
 }
 
+.jumbotron{
+	background: url('/images/photo.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.jumbotron p {
+	color: #199999;
+}
+
+.jumbotron a {
+	color: #fff;
+}
+
 .center {
     text-align: center;
 }
