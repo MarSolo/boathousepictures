@@ -14,11 +14,7 @@ $jumbotron-bg:               white;
 @import 'bootstrap';
 
 body {
-	// background: url('/images/photo.jpg') no-repeat center center fixed;
-	// -webkit-background-size: cover;
-	// -moz-background-size: cover;
-	// -o-background-size: cover;
-	// background-size: cover; 
+	
 }
 
 h1 {
@@ -47,10 +43,16 @@ h5 {
 
 .container {
 	background-color: #ecf0f1;
+	background: url('/images/photo.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; 
 }
 
 .jumbotron{
-	background: url('/images/photo.jpg') no-repeat center center fixed;
+	width: 900px;
+	background: url('/images/photo1.jpg') no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
