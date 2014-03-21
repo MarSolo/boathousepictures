@@ -46,7 +46,6 @@ h5 {
 }
 
 .container {
-	background-color: #ecf0f1;
 	background: url('/images/photo.jpg') no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -95,6 +94,7 @@ h5 {
 
 .navbar {
 	margin-bottom: -1px;
+	border: none;
 }
 
 .navbar-header {
