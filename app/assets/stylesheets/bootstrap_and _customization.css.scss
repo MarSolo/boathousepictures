@@ -93,10 +93,14 @@ h5 {
 }
 
 .navbar {
-	margin-bottom: -1px;
-	margin-left: 60px;
+	margin: 0 0 -1px 20px;
 	border: none;
-	width: 0px;
+	width: 900px;
+	background: url('/images/photo.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; 
 }
 
 .navbar li {
