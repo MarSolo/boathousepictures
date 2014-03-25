@@ -108,13 +108,6 @@ h5 {
 	font-family: Georgia, Times, "Times New Roman", serif;
 }
 
-.navbar li hover {
-	-moz-box-shadow:10px 5px 15px rgba(0,0,0,.5); 
-	-webkit-box-shadow:10px 5px 15px rgba(0,0,0,.5);
-	box-shadow: 1px 3px 15px rgba(0,0,0,.5); /*10px is horizontal offset, 5px is vertical offset, 15px is blur radius and rgba(0,0,0,.5) is shadow color*/
-	margin-bottom: 30px;	
-}
-
 .dropdown-menu {
 	-moz-box-shadow:10px 5px 15px rgba(0,0,0,.5); 
 	-webkit-box-shadow:10px 5px 15px rgba(0,0,0,.5);
@@ -131,4 +124,9 @@ h5 {
 	-webkit-box-shadow:10px 5px 15px rgba(0,0,0,.5);
 	box-shadow: 1px 3px 15px rgba(0,0,0,.5); /*10px is horizontal offset, 5px is vertical offset, 15px is blur radius and rgba(0,0,0,.5) is shadow color*/
 	margin-bottom: 30px;
+}
+
+.perna {
+	float: left;
+	margin: 10px 20px 0px 0px;
 }
