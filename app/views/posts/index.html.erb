@@ -1,5 +1,15 @@
+<div class="mainbox">
 <div class="container-fluid">
   <br>
+
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
   <div id="carousel" class="carousel slide">
   <!-- Indicators -->
@@ -36,8 +46,8 @@
 </div>
                           
   <div class="row">
+    <h1>News</h1>
     <div class="col-md-8">
-        <h1>News</h1>
 
       <% if admin_signed_in? %>
         <%= link_to new_post_path do %>
@@ -78,16 +88,20 @@
     </div>
 
     <div class="col-md-4">
-      <h1 align="right">Social Media</h1>
 
+      <div class="box panel panel-default">
+      <div class="panel-body">
+      <div class="fb-like-box" data-href="https://www.facebook.com/bhpictures" data-width="250px" data-height="290" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="false"></div>
+      </iframe>
+      </div>
+      </div>
+
+      <div class="box panel panel-default">
+      <div class="panel-body">
         <a class="twitter-timeline" href="https://twitter.com/BH_Pictures" data-widget-id="421485262435127296">Tweets by @BH_Pictures</a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-        <br>
-        <br>
-
-      <iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fbhpictures&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:290px;" allowTransparency="false">
-      </iframe>
+      </div>
+      </div>
 
     </div>
   </div>
@@ -97,3 +111,5 @@
        <%= will_paginate @collection, renderer: BootstrapPagination::Rails %>
     </div>
   </div>
+
+</div>
