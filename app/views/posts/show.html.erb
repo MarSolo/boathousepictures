@@ -14,7 +14,7 @@
 	        	<%= simple_format @post.text %>
 	        <br>
 
-			<% if current_admin && post.admin == current_admin %>
+			<% if current_admin && @post.admin == current_admin %>
 				<%= link_to edit_post_path(@post) do %>
 	        	Edit
 	      		<% end %>
@@ -42,7 +42,7 @@
                     <!-- <p><%= link_to image_tag(post.image.url(:medium)), post %><p> -->
                     <%= link_to post do %><h6>Read More</h6><% end %>
 
-                    <% if post.admin == current_admin %>
+                    <% if current_admin && @post.admin == current_admin %>
 
                         <%= link_to edit_post_path(post) do %>
                             Edit
