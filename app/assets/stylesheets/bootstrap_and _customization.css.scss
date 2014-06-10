@@ -23,7 +23,7 @@ body {
 }
 
 h1 {
-	font-size: 18px;
+	font-size: 16px;
 	margin: 10px 0 10px 25px;
 }
 
@@ -69,12 +69,16 @@ img {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	}
+}
+
+.carousel p {
+	color: black;
+	font-size: 12px;
+	text-align: center;
+}
 
 .jumbotron {
-	width: 100%;
-	margin: 0 auto;
-	margin-bottom: 10px;
+	margin: 0 10px 10px 10px;
 
 	background: url('/images/photo1.jpg') no-repeat center center fixed;
 	-webkit-background-size: cover;
