@@ -66,19 +66,17 @@
             </div>
 
           <div id="posts" class="transitions-enabled">
-
             <% @posts.each do |post| %>
               <div class="box panel panel-default">
                 <div class="panel-body">
-                  <div class="actions">
                     <%= link_to post do %><h2><%= post.title %></h2><% end %>
                     <h5>Posted by <strong><%= post.admin.name if post.admin %></strong> on 
                     <%= post.created_at.strftime("%b %d, %Y") %></h5>
-                    <!-- <p><%= link_to image_tag(post.image.url(:medium)), post %><p> -->
+                    <p><%= link_to image_tag(post.image.url(:medium)), post %><p>
+                    <br>
+                    <div class="actions">
                         <%= truncate post.text, length: 50, separator: ' ' %>
                         <%= link_to post do %>Continue<% end %>
-                        <br>
-                        <br>
                         <% if current_admin && post.admin == current_admin %>
                         <%= link_to edit_post_path(post) do %>
                             Edit
@@ -101,7 +99,7 @@
 
       <br>
 
-      <div class="fb-like-box" data-href="https://www.facebook.com/bhpictures" data-width="250px" data-height="290" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="false"></div>
+      <div class="fb-like-box" data-href="https://www.facebook.com/bhpictures" data-width="290px" data-height="290" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="false"></div>
       
         <a class="twitter-timeline" href="https://twitter.com/BH_Pictures" data-widget-id="421485262435127296">Tweets by @BH_Pictures</a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
@@ -111,6 +109,7 @@
 
   <div class="row">
     <div class="col-md-8">
+      <div class="center">
        <%= will_paginate @collection, renderer: BootstrapPagination::Rails %>
     </div>
   </div>
