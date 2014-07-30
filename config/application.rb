@@ -24,9 +24,9 @@ module BoathouseBlog
     config.assets.initialize_on_precompile = false
 
     config.action_mailer.smtp_settings = {
-      :address              => "smtp.gmail.com",
+      :address              => "smtp.bhpictures.com",
       :port                 => 587,
-      :domain               => "gmail.com",
+      :domain               => "bhpictures.com",
       :user_name            => "asaballette@bhpictures.com",
       :password             => "admin1",
       :authentication       => :plain,

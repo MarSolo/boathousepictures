@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 
 $body-bg:                    #ecf0f1; 
-$font-family-sans-serif:     ProximaNova-Light, Verdana, sans-serif;
+$font-family-sans-serif:     'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $navbar-height:              25px;
 $navbar-default-bg:          #ecf0f1;
 $navbar-default-brand-color: #000099;
@@ -19,20 +19,19 @@ body {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover; 
-	font-size: 12px;
+	font-size: 14px;
 }
 
 h1 {
-	font-size: 16px;
-	margin: 10px 0 10px 25px;
+	font-size: 20px;
 }
 
 h2 {
-	font-size: 16px;
+	font-size: 20px;
 }
 
 h3 {
-	font-size: 14px;
+	font-size: 16px;
 }
 
 
@@ -43,11 +42,7 @@ h4 {
 }
 
 h5 {
-	font-size: 10px;
-}
-
-img {
-	padding-right: 15px;
+	font-size: 12px;
 }
 
 .container {
@@ -78,29 +73,29 @@ img {
 }
 
 .jumbotron {
-	margin: 0 10px 10px 10px;
+	margin: 0 auto;
 
 	background: url('/images/photo1.jpg') no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-
-	-moz-box-shadow:10px 5px 15px rgba(0,0,0,.5); 
-	-webkit-box-shadow:10px 5px 15px rgba(0,0,0,.5);
-	box-shadow: 1px 1px 15px rgba(0,0,0,.5); /*10px is horizontal offset, 5px is vertical offset, 15px is blur radius and rgba(0,0,0,.5) is shadow color*/
 }
 
 .jumbotron p {
 	color: black;
-	font-size: 12px;
+	font-size: 16px;
 	text-align: center;
 }
 
 .jumbotron li {
-	margin: 0px 0 0 60px;
-	font-family: ProximaNova-Light, Verdana, sans-serif;
+	margin: 0 auto;
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 16px;
+}
+
+.jumbotron a {
+	margin: 0 auto;
 	text-align: center;
 }
 
@@ -115,7 +110,7 @@ img {
 }
 
 .navbar li {
-	margin: 75px 0px 0 50px;
+	margin: 75px 0px 0px 55px;
 	font-weight: bold;
 	font-family: Georgia, Times, "Times New Roman", serif;
 	font-size: 14px;
@@ -132,10 +127,6 @@ img {
 	margin: 10px;
 }
 
-.twitter-timeline {
-	margin-right: 40px;
-}
-
 .login {
-	margin: 0 0 40px 10px;
+	margin: 0 0 40px 0;
 }

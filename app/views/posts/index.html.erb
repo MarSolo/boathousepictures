@@ -1,49 +1,38 @@
 <div class="container-fluid">
-  <div class="mainbox">
-  <br>
-
-  <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 
   <div id="carousel" class="carousel slide">
   <!-- Indicators -->
 
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
 
-    <div class="item active">
-     <br>
-      <p align="center">
-        <a href="//www.bhpictures.com/roadworkahead">
-          <img src="images/RWA_Poster_image_resize.jpg" alt="carousel">
-        </a>
-      </p>
+      <div class="item active">
+       <br>
+        <p align="center">
+          <a href="//www.bhpictures.com/roadworkahead">
+            <img src="images/RWA_Poster_image_resize.jpg" alt="carousel">
+          </a>
+        </p>
+      </div>
+
+      <div class="item">
+        <br>
+        <br>
+        <p align="center">
+          <iframe src="//player.vimeo.com/video/66759737" width="500" height="285" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </p>
+      </div>
+
     </div>
 
-    <div class="item">
-      <br>
-      <br>
-      <p align="center">
-        <iframe src="//player.vimeo.com/video/66759737" width="500" height="276" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-      </p>
-    </div>
-
-</div>
-
-  <!-- Controls -->
-  <a class="left carousel-control" href="#carousel" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-  </a>
-  <a class="right carousel-control" href="#carousel" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-  </a>
-</div>
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </div>
                           
   <div class="row">
     <div class="col-md-8">
@@ -68,22 +57,18 @@
           <div id="posts" class="transitions-enabled">
             <% @posts.each do |post| %>
               <div class="box panel panel-default">
+                <%= link_to image_tag(post.image.url(:medium)), post %>
                 <div class="panel-body">
                     <%= link_to post do %><h2><%= post.title %></h2><% end %>
                     <h5>Posted by <strong><%= post.admin.name if post.admin %></strong> on 
                     <%= post.created_at.strftime("%b %d, %Y") %></h5>
-                    <p><%= link_to image_tag(post.image.url(:medium)), post %><p>
-                    <br>
                     <div class="actions">
-                        <%= truncate post.text, length: 50, separator: ' ' %>
+                        
                         <%= link_to post do %>Continue<% end %>
-                        <br>
-                        <br>
                         <% if current_admin && post.admin == current_admin %>
                         <%= link_to edit_post_path(post) do %>
                             Edit
                         <% end %>
-                            <br>
                         <%= link_to post, method: :delete, data: { confirm: 'Are you sure?' } do %>
                             Delete
                         <% end %>
@@ -100,19 +85,19 @@
     <div class="col-md-4">
 
       <br>
-
-      <div class="fb-like-box" data-href="https://www.facebook.com/bhpictures" data-width="280px" data-height="290" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="false"></div>
       
         <a class="twitter-timeline" href="https://twitter.com/BH_Pictures" data-widget-id="421485262435127296">Tweets by @BH_Pictures</a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
     </div>
+    
   </div>
 
   <div class="row">
     <div class="col-md-8">
       <div class="center">
        <%= will_paginate @collection, renderer: BootstrapPagination::Rails %>
+      </div>
     </div>
   </div>
 
