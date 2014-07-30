@@ -1,27 +1,24 @@
 <div class="container-fluid">
-<div class="mainbox">
-<div class="row">
 
+<div class="row">
   <div class="col-md-8">
     
-    	<h1><%= @post.title %></h1>
+    <h1><%= @post.title %></h1>
       <div class="panel panel-default">
           <div class="panel-heading center">
-    	     <%= image_tag @post.image.url (:medium) %>
+    	   <%= image_tag @post.image.url (:medium) %>
     	    </div>
     	        <div class="panel-body">
-    		        <h5>Posted by <strong><%= @post.admin.name if @post.admin %></strong>
-    		        </h5>
-    		        <br>
+    		        <h5>Posted by <strong><%= @post.admin.name if @post.admin %></strong> on 
+                    <%= @post.created_at.strftime("%b %d, %Y") %></h5>
+                    <br>
     	        	<%= simple_format @post.text %>
-    	          <br>
 
         			<% if current_admin && @post.admin == current_admin %>
         				<%= link_to edit_post_path(@post) do %>
         	        	Edit
         	      		<% end %>
                 	<% end %>
-                		<br>
                 		<%= link_to posts_path do %>
                 		Back
                 		<% end %>
@@ -32,7 +29,7 @@
   </div>
 
     <div class="col-md-4">
-        <h1>Other News</h1>
+        <h1>Recent Posts</h1>
 
           <div id="posts" class="transitions-enabled">
             <% @posts.each do |post| %>
@@ -64,6 +61,5 @@
           </div>
     </div>
 
-</div>
 </div>
 </div>

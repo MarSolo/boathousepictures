@@ -1,4 +1,4 @@
-BoathouseBlog::Application.routes.draw do
+SunshineBlog::Application.routes.draw do
   resources :users
 
   devise_for :admins
@@ -8,14 +8,25 @@ BoathouseBlog::Application.routes.draw do
   # devise_for :installs
   root "posts#index"
   get "about" => "pages#about" # creates about_path
-  get "services" => "pages#services" # creates services_path
 
-    get "event" => "pages#event"
-    get "corporate" => "pages#corporate"
-    get "special" => "pages#special"
-    get "perna" => "pages#perna"
+    get "services" => "pages#services"
+    get "goldsmith" => "pages#goldsmith"
+    get "mission" => "pages#mission"
+
+  get "products" => "pages#products" # creates services_path
+
+    get "jewelry" => "pages#jewelry"
+    get "necklaces" => "pages#necklaces"
+    get "earrings" => "pages#earrings"
+    get "rings" => "pages#rings"
+    get "blackpearls" => "pages#blackpearls"
+    get "children" => "pages#children"
+    get "bridal" => "pages#bridal"
+    get "christmas" => "pages#christmas"
+
+    get "show" => "pages#show"
     
-  get "media" => "pages#media" # creates media_path
+  # get "media" => "pages#media" # creates media_path
   # get "contact" => "pages#contact"
 
   get 'contact' => 'contact#new'

@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-BoathouseBlog::Application.load_tasks
+SunshineBlog::Application.load_tasks

@@ -6,7 +6,7 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
-module BoathouseBlog
+module SunshineBlog
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
@@ -24,9 +24,9 @@ module BoathouseBlog
     config.assets.initialize_on_precompile = false
 
     config.action_mailer.smtp_settings = {
-      :address              => "smtp.gmail.com",
+      :address              => "smtp.bhpictures.com",
       :port                 => 587,
-      :domain               => "gmail.com",
+      :domain               => "bhpictures.com",
       :user_name            => "asaballette@bhpictures.com",
       :password             => "admin1",
       :authentication       => :plain,
