@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 
-$body-bg:                    #ecf0f1; 
+$body-bg:                    white; 
 $font-family-sans-serif:     'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $navbar-height:              25px;
 $navbar-default-bg:          #ecf0f1;
@@ -14,11 +14,6 @@ $jumbotron-bg:               white;
 @import 'bootstrap';
 
 body {
-	background: url('/images/photo.jpg') no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover; 
 	font-size: 14px;
 }
 
@@ -46,12 +41,6 @@ h5 {
 }
 
 .container {
-	background: url('/images/photo.jpg') no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover; 
-
 	-webkit-border-radius: 10px;
   	-moz-border-radius: 10px;
   	-ms-border-radius: 10px;
@@ -59,17 +48,16 @@ h5 {
 }
 
 .carousel {
-	background: url('/images/photo1.jpg') no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+	width: 100%;
+	// background: url('/images/photo1.jpg') no-repeat center center fixed;
+	// -webkit-background-size: cover;
+	// -moz-background-size: cover;
+	// -o-background-size: cover;
+	// background-size: cover;
 }
 
-.carousel p {
-	color: black;
-	font-size: 12px;
-	text-align: center;
+.carousel h1 {
+	font-size: 60px;
 }
 
 .jumbotron {
