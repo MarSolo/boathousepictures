@@ -2,10 +2,6 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :correct_admin, only: [:edit, :update, :destroy]
   before_action :authenticate_admin!, except: [:index, :show]
-
-=begin
-  http_basic_authenticate_with name: "Mario", password: "rusty1984", except: [:index, :show]
-=end
  
   def index
     @posts = Post.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 6)
@@ -14,7 +10,6 @@ class PostsController < ApplicationController
   def show
     @posts = Post.all.order("created_at DESC").paginate(:page => params[:page])
   end
-
 
   def new
   	@post = current_admin.posts.build

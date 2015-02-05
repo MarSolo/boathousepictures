@@ -3,7 +3,7 @@
 $body-bg:                    white; 
 $font-family-sans-serif:     'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $navbar-height:              25px;
-$navbar-default-bg:          #ecf0f1;
+$navbar-default-bg:          white;
 $navbar-default-brand-color: #000099;
 $navbar-default-link-color:  #000099;
 $brand-primary:              #000099;
@@ -15,10 +15,16 @@ $jumbotron-bg:               white;
 
 body {
 	font-size: 14px;
+	margin: 0 auto;
+	background: url('/images/boathouse_row.png') no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
 }
 
 h1 {
-	font-size: 20px;
+	font-size: 30px;
 }
 
 h2 {
@@ -40,67 +46,81 @@ h5 {
 	font-size: 12px;
 }
 
-.container {
-	-webkit-border-radius: 10px;
-  	-moz-border-radius: 10px;
-  	-ms-border-radius: 10px;
-  	border-radius: 10px;
-}
-
 .carousel {
 	width: 100%;
-	// background: url('/images/photo1.jpg') no-repeat center center fixed;
-	// -webkit-background-size: cover;
-	// -moz-background-size: cover;
-	// -o-background-size: cover;
-	// background-size: cover;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	box-shadow: 5px 5px 5px #888888;
 }
 
 .carousel h1 {
 	font-size: 60px;
 }
 
+.shadow5 {
+  text-shadow: 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black;
+}
+
+.contact {
+	width: 100%;
+	margin: 0 auto;
+	background: url('/images/boathouse_row.png');
+}
+
 .jumbotron {
 	margin: 0 auto;
-
-	background: url('/images/photo1.jpg') no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+	background: url('/images/boathouse_row_blue.png') no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
 }
 
 .jumbotron p {
-	color: black;
+	color: white;
 	font-size: 16px;
 	text-align: center;
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.jumbotron ul {
+	text-align: center; 
+	list-style-type: none;
+	margin: 0 auto;
 }
 
 .jumbotron li {
 	margin: 0 auto;
 	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 16px;
+	display: inline;
+	color: white;
 }
 
 .jumbotron a {
 	margin: 0 auto;
 	text-align: center;
+	color: white;
 }
 
 .center {
     text-align: center;
 }
 
+.navbar-header {
+	margin: 0 0 0 125px;
+}
+
 .navbar {
-	margin: 0 0 0 20px;
-	border: none;
-	background: none;
+	margin: 0 auto;
+	background: url('/images/boathouse_row.png') no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
 }
 
 .navbar li {
 	margin: 75px 0px 0px 55px;
-	font-weight: bold;
-	font-family: Georgia, Times, "Times New Roman", serif;
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 14px;
 }
 

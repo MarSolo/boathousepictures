@@ -7,21 +7,21 @@
       <div class="item active">
           <img src="images/commercial_edit.jpg" alt="carousel" width="100%">
           <div class="carousel-caption">
-            <h1>Commercials</h1>
+            <h1 class="shadow5">Documentary and PSA</h1>
           </div>
       </div>
 
       <div class="item">
           <img src="images/radison.jpg" alt="carousel" width="100%">
           <div class="carousel-caption">
-            <h1>Brand Marketing</h1>
+            <h1 class="shadow5">Brand Marketing</h1>
           </div>
       </div>
 
       <div class="item">
           <img src="images/film_shot.jpg" alt="carousel" width="100%">
           <div class="carousel-caption">
-            <h1>Films</h1>
+            <h1 class="shadow5">Cinema</h1>
           </div>
       </div>
 
@@ -41,7 +41,7 @@
                           
   <div class="row">
     <div class="col-md-8">
-    <h1>News</h1>
+    <h1>Headlines</h1>
 
           <!--Login Controls-->
             <div class="login">
@@ -62,18 +62,20 @@
           <div id="posts" class="transitions-enabled">
             <% @posts.each do |post| %>
               <div class="box panel panel-default">
-                <%= link_to image_tag(post.image.url(:medium)), post %>
                 <div class="panel-body">
-                    <%= link_to post do %><h2><%= post.title %></h2><% end %>
+                  <%= link_to post do %><h2><%= post.title %></h2><% end %>
                     <h5>Posted by <strong><%= post.admin.name if post.admin %></strong> on 
                     <%= post.created_at.strftime("%b %d, %Y") %></h5>
-                    <div class="actions">
-                        
-                        <%= link_to post do %>Continue<% end %>
+                    <%= link_to image_tag(post.image.url(:medium)), post %>
+
+                    <div class="actions">    
+                      <br>
+                        <%= simple_format post.text %>
                         <% if current_admin && post.admin == current_admin %>
                         <%= link_to edit_post_path(post) do %>
                             Edit
                         <% end %>
+                        <br>
                         <%= link_to post, method: :delete, data: { confirm: 'Are you sure?' } do %>
                             Delete
                         <% end %>
