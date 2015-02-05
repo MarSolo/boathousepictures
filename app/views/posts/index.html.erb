@@ -43,22 +43,6 @@
     <div class="col-md-8">
     <h1>Headlines</h1>
 
-          <!--Login Controls-->
-            <div class="login">
-              <ul class="nav navbar-nav navbar-justified">
-              <% if admin_signed_in? %>
-                <li>
-                  <%= link_to new_post_path do %>
-                    <span class="glyphicon glyphicon-plus"></span>New Post<% end %>
-                </li>
-                    <li><%= link_to "Account", edit_admin_registration_path %></li>
-                    <li><%= link_to "Log Out", destroy_admin_session_path, method: :delete %></li>
-                  <% else %>
-                    <li><%= link_to "Log In", new_admin_session_path %></li>
-                  <% end %>
-              </ul>
-            </div>
-
           <div id="posts" class="transitions-enabled">
             <% @posts.each do |post| %>
               <div class="box panel panel-default">
@@ -102,6 +86,23 @@
 
   <div class="row">
     <div class="col-md-8">
+
+      <!--Login Controls-->
+            <div class="login">
+              <ul class="nav navbar-nav navbar-justified">
+              <% if admin_signed_in? %>
+                <li>
+                  <%= link_to new_post_path do %>
+                    <span class="glyphicon glyphicon-plus"></span>New Post<% end %>
+                </li>
+                    <li><%= link_to "Account", edit_admin_registration_path %></li>
+                    <li><%= link_to "Log Out", destroy_admin_session_path, method: :delete %></li>
+                  <% else %>
+                    <li><%= link_to "Log In", new_admin_session_path %></li>
+                  <% end %>
+              </ul>
+            </div>
+
       <div class="center">
        <%= will_paginate @collection, renderer: BootstrapPagination::Rails %>
       </div>
