@@ -24,10 +24,10 @@ module BoathouseBlog
     config.assets.initialize_on_precompile = false
 
     config.action_mailer.smtp_settings = {
-      :address              => "smtp.bhpictures.com",
+      :address              => "smtp.gmail.com",
       :port                 => 587,
       :domain               => "bhpictures.com",
-      :user_name            => "asaballette@bhpictures.com",
+      :user_name            => "info@bhpictures.com",
       :password             => "admin1",
       :authentication       => :plain,
       :enable_starttls_auto => true
