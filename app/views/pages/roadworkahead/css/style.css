@@ -1,0 +1,438 @@
+/*
+
+Website: www.bhpictures.com/roadworkahead
+Version: 2.0
+Author: Mario Maiale
+
+*/
+
+
+/* period means class */
+/* hashtag means id */
+
+html { 
+	background: url("../rwa_files/road.jpg") no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	
+}
+
+#container {
+	width: 100%;
+	margin: auto;
+	position:relative;
+	height:100%;
+	min-height:600px;
+	padding:0;
+	z-index:1;
+	
+	
+}
+
+p, ul {
+	color: white;
+	font-size: 12px;
+	font-family:  Tahoma, Geneva, sans-serif;
+}
+
+a {
+	font-family: Tahoma, Geneva, sans-serif;
+	color: #FFF;
+}
+
+	a:hover {
+		color: #FFF;
+	}
+	
+	a:active {
+		color: #FFF;
+	}
+
+/*------------------------------
+=NAVIGATION MENU
+------------------------------*/
+h1#logo{
+	position:absolute;
+	background-image: url('../rwa_files/rwa-logo.png');
+	background-repeat: no-repeat;
+	display: block;
+	width: 272px;
+	height:272px;
+	text-indent: -9999px;
+	top: -155px;
+	left: 25px;
+}
+
+#nav {
+	font-family:Helvetica, Arial, sans-serif;
+	position: relative;
+	width: 960px;
+	margin: 0 auto;
+	list-style: none;
+	text-align:center;
+}
+
+ul#navigation {
+	margin: 0px auto;
+	position: relative;
+	float: none;
+}
+
+ul#navigation li {
+	display: inline;
+	text-align:center;
+	font-size: 12px;
+	margin: 0 15px;
+	padding: 0;
+	float: none;
+	letter-spacing: 3px;
+	position: relative;
+}
+
+ul#navigation li a {
+	color: #FFF;
+	text-decoration: none;
+	display: inline-block;
+	
+	-webkit-transition:color 0.2s linear, background 0.2s linear;	
+	-moz-transition:color 0.2s linear, background 0.2s linear;	
+	-o-transition:color 0.2s linear, background 0.2s linear;	
+	transition:color 0.2s linear, background 0.2s linear;	
+}
+
+ul#navigation li a:hover {
+	background: #ff9933;
+	color: #ff9933;
+	text-shadow: 1px 1px 13px #ff9933;
+}
+
+ul#navigation li:hover > a {
+	background: none;
+}
+
+/*------------------------------
+=MAIN CONTENT
+------------------------------*/
+
+#content {
+	float: left;
+	width: 960px;
+	width:100%;
+	min-width:960px;
+	margin:0 auto;
+	position:relative;
+	top:22%;
+        padding:0;
+        min-height:350px;
+		background:rgba(0,0,0,.4);
+		font-size: 14px;
+		color: #FFF;
+}  
+#content.content-2{
+	background:none;}
+
+#wrap{
+    width:960px;
+    margin:0 auto;
+    display:block;
+    position:relative;
+	min-height:350px;
+
+
+}
+	#content h1 {	
+		color: #000;
+		font-size: 24px;
+		text-align: center;
+		margin: 30px 10px 0px 10px;
+		font-family: Helvetica Neue, 'HelveticaNeue', Helvetica, Arial, sans-serif;
+	}
+
+	#content h2 {
+		margin: 0px 10px 0px 10px;
+		
+		font-family: Helvetica Neue, 'HelveticaNeue', Helvetica, Arial, sans-serif;
+		text-align: center;
+		font-size: 20px;
+		color: #000;
+	}
+
+#content h3{
+	font-family: Helvetica Neue, 'HelveticaNeue', Helvetica, Arial, sans-serif;
+	color:orange;
+	margin:0 0 0 0;
+	font-size:18px;
+	text-transform:none;
+	font-weight:normal;
+}
+	#content p {
+		margin:0;
+		
+		font-family: Helvetica Neue, 'HelveticaNeue', Helvetica, Arial, sans-serif; 
+			}
+	
+	#content ul {
+		padding-left: 50px;
+	}
+	
+	#content li {
+		margin: 0 100px;
+		
+		font-family: Helvetica Neue, 'HelveticaNeue', Helvetica, Arial, sans-serif;
+		font-size: 14px;
+		color: #FFF;
+		list-style: disc;
+	}	
+	
+	#content li a {
+		color: #000;
+	}
+	
+.alpha60 {
+	width: 960px;
+	
+	-webkit-border-bottom-left-radius: 20px; /* Chrome/Safari */
+	-moz-border-bottom-left-radius: 20px; /* Firefox */
+	-webkit-border-bottom-right-radius: 20px; /* Chrome/Safari */
+	-moz-border-bottom-right-radius: 20px; /* Firefox */
+	border radius bottom left: 20px; /* IE */
+	border radius bottom right: 20px; /* IE */
+	
+	/* Fallback for web browsers that doesn't support RGBa */
+	background: rgb(255, 153, 31);
+	/* RGBa with 0.8 opacity */
+	background: rgba(255, 153, 31, 0.7);
+	/* For IE 5.5 - 7*/
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+	/* For IE 8*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+
+
+.bodytext-1{
+	
+	position:absolute;
+	top:130px;
+	left:55px;
+		color:#fad48b;
+		font-size:12px;
+		line-height:1.5;
+		font-weight:normal;
+}
+
+.bodytext-1 h3{
+	
+	font-family: Helvetica Neue, 'HelveticaNeue', Helvetica, Arial, sans-serif;
+	color:orange;
+	margin:0 0 0 0;
+	font-size:18px;
+	text-transform:none;
+	font-weight:normal;
+}
+
+#content .bodytext-1 p{
+	
+	font-family: Helvetica Neue, 'HelveticaNeue', Helvetica, Arial, sans-serif;
+	font-size:12px;
+	margin:0;
+	color:#fad48b;
+	line-height:1.5;
+	margin:0;
+	width:430px;
+}
+
+.bodytext-2{
+	
+	position:absolute;
+	top:100px;
+	right:0;
+	text-align:right;
+}
+
+#content .bodytext-2 p{
+	font-family: Helvetica, Arial, sans-serif;
+	font-size:12px;
+	margin:0;
+	color:#fad48b;
+	line-height:1.5;
+	margin:0;
+}
+
+
+div.contact {
+		padding: 1ex;
+		margin: 1em;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		color: white;
+		
+		-webkit-border-radius: 20px; /* Chrome/Safari */
+		-moz-border-radius: 20px; /* Firefox */
+		border radius: 20px; /* IE */
+		
+		/* Fallback for web browsers that doesn't support RGBa */
+		background: rgb(0, 0, 0);
+		/* RGBa with 0.8 opacity */
+		background: rgba(0, 0, 0, 0.55);
+		/* For IE 5.5 - 7*/
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+		/* For IE 8*/
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+
+img {
+	display: block;
+}
+
+	img.imageborder, img.imageborder:link, img.imageborder:visited {
+		border: none;
+	}
+	
+
+blockquote { 
+	margin: 0 0 22px 0; 
+	background: rgba(0,0,0,.05); 
+	border-left: 4px solid rgba(0,0,0,.1); 
+	padding: 22px; 
+	font-style: italic; 
+}
+
+article {
+	display: block;
+}
+	
+#footer {
+	position:absolute; 
+	bottom:0;
+	left:0;
+	width:100%;
+	clear: both;
+	text-align: center;
+	height:50px;
+	z-index:0;
+}
+
+	#footer p {
+		margin: 10px;
+		font-family: Tahoma, Geneva, sans-serif; 
+		font-size: 16px;
+		color: #FFF;
+                display:block;
+                width:960px;
+                margin:0 auto;
+				height:50px;
+	}
+.bh-img{
+  width:250px;
+  display:inline-block;
+    position:relative;
+    top:-20px;
+}
+
+	
+/*------------------------------
+=CONTACT FORM
+------------------------------*/
+	
+#contact_form_holder {
+    font-family: 'Verdana'; /* this is a nice font-family, at least i think, if you don't like it change it <img src="http://web.enavu.com/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley">  */
+    font-variant: small-caps; /* making the small letter looks like capital but keeping the size of it to smaller, looks cool */
+    width: 300px; /* setting a fixed width of the contact form holder will make things easier later (like aligning and such) */
+	padding: 20px 0 0 320px;
+}
+
+#contact_form_holder input, #contact_form_holder textarea {
+    width: 100%; /* make all the inputs and the textarea same size (100% of the div they are into) */
+    font-family: inherit; /* we must set this, so it inherits the font-family */
+    padding: 0px; /* and make a custom padding, you can set whatever you like */
+}
+
+#contact_form_holder textarea {
+    height: 100px; /* i never liked small textareas, so make it 100px in height */
+}
+
+#send_message {
+    width: 150px !important; /* the width of the submit button  */
+    font-variant: small-caps; /* nicer font-variant (like explained before) */
+    border: 1px solid black; /* remove the default border and put a normal black one */
+    cursor: pointer;
+    cursor: hand;
+}
+
+#cf_submit_p { text-align: center; } /* show the submit button aligned with the right side */
+
+/* styling */
+
+.error {
+    display: none; /* hide the errors */
+    /* add some styling */
+    padding:10px;
+    color: #D8000C;
+    font-size:12px;
+    background-color: #FFBABA;
+}
+.success {
+    display: none; /* hide the sucess div */
+    /* add some styling */
+    padding:10px;
+    color: #044406;
+    font-size:12px;
+    background-color: #B7FBB9;
+}
+
+#contact_logo { vertical-align: middle; }
+.error img { vertical-align:top; }
+
+/*------------------------------
+Home specific
+------------------------------*/
+#home-left{
+	width:40%;
+	float:left;
+}
+#home-right{
+	float:right;
+	text-align:right;
+}
+#home-right p{
+        margin-left:0; margin-right:0;
+}
+#content p.videodesc{
+	color:white;
+}
+
+#content p.videodesc a{
+	color:white;
+}
+
+div#tagline-home{
+    position: relative;
+    top: 165px;
+    left: 80px;
+}
+
+/*------------------------------
+=LIGHTBOX GALLERY
+------------------------------*/
+
+
+
+.vlink{
+	display:block;
+	float:right;
+	width:200px;
+	margin: 0 20px 0 0;
+	vertical-align:top;
+}
+
+.videoplay{
+	width:200px;	
+}
+.gallery li {
+    display: inline-block;
+	padding-left: 15px;
+    list-style: none;
+}
+
