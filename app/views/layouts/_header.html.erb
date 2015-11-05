@@ -17,7 +17,13 @@
      <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><%= link_to "ABOUT US", about_path %></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">ABOUT US <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "Our Team", about_path %></li>
+            <li><%= link_to "Our Partners", partner_path %></li>
+          </ul>
+        </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">SERVICES <b class="caret"></b></a>
           <ul class="dropdown-menu">

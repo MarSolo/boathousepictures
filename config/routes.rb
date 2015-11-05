@@ -7,6 +7,7 @@ BoathouseBlog::Application.routes.draw do
   # devise_for :installs
   root "posts#index"
   get "about" => "pages#about" # creates about_path
+  get "partner" => "pages#partner" # creates team_path
   get "services" => "pages#services" # creates services_path
 
     get "event" => "pages#event"

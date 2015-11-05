@@ -5,6 +5,9 @@ class PagesController < ApplicationController
   def about
   end
 
+  def partner
+  end
+
   def services
       def event
       end
